@@ -18,8 +18,7 @@ const client = createClient({
   dataset: 'production',
   apiVersion: '2024-03-15',
   useCdn: false,
-  token: token, // Add the token for accessing draft content
-  perspective: 'previewDrafts', // Use the preview perspective
+  token: token // Add the token for accessing draft content
 })
 
 export default defineConfig({
