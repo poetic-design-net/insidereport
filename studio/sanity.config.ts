@@ -37,8 +37,7 @@ export default defineConfig({
     unsplashImageAsset(),
     presentationTool({
       previewUrl: {
-        // Use VERCEL_URL in production, fallback to localhost for development
-        origin: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:5173',
+        origin: process.env.NODE_ENV === 'development' ? 'http://localhost:5173' : 'https://insidereport.vercel.app',
         preview: '/',
         previewMode: {
           enable: '/api/draft?secret=inside-report-preview-secret',
